@@ -1,108 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Been Catering Buffet</title>
+
     <style>
+        /* ------- ESTILOS GENERALES -------- */
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #fafafa;
-            color: #333;
+            font-family: "Poppins", Arial, sans-serif;
+            background: #FFF7ED;
+            color: #1B3A2F;
         }
 
-        /* Header */
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+
+        /* ------- HEADER -------- */
         header {
-            background: #fff;
-            padding: 20px 40px;
+            background: white;
+            padding: 15px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
             z-index: 10;
         }
+
         header nav a {
-            margin-left: 20px;
+            margin-left: 25px;
             text-decoration: none;
-            color: #333;
-            font-weight: bold;
+            color: #1B3A2F;
+            font-weight: 600;
+            transition: 0.3s;
         }
 
-        /* Hero */
+        header nav a:hover {
+            color: #D4A056;
+        }
+
+        /* ------- HERO -------- */
         .hero {
             text-align: center;
-            padding: 60px 20px;
-            background: #fff4e6;
-        }
-        .hero img {
-            width: 300px;
-        }
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            font-size: 20px;
+            padding: 70px 20px;
         }
 
-        /* Secciones */
-        section {
-            padding: 50px;
+        .hero img {
+            width: 280px;
         }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            color: #333;
+        }
+
+        /* ------- TITULOS -------- */
         .titulo {
             font-size: 40px;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
         }
 
-        /* Grid imágenes + texto */
+        .titulo::after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background: #D4A056;
+            display: block;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        /* ------- GRID -------- */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
-            align-items: start;
-        }
-        .grid img {
-            width: 100%;
-            border-radius: 10px;
+            padding: 20px;
         }
 
-        /* Tarjetas */
+        /* ------- TARJETAS / CARDS -------- */
         .card {
             background: white;
+            border-radius: 15px;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
         }
 
-        /* WhatsApp */
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        /* ------- WHATSAPP -------- */
         .whatsapp {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: #25d366;
+            background: #25D366;
             color: white;
             padding: 15px 20px;
             border-radius: 50px;
             text-decoration: none;
             font-size: 18px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
         }
 
+        /* ------- FOOTER -------- */
         footer {
-            background: #333;
+            background: #1B3A2F;
             color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
+            padding: 30px;
+            margin-top: 60px;
         }
+
     </style>
+
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
-    <div class="logo">BEEN CATERING BUFFET</div>
+    <div class="logo" style="font-weight:800; font-size:22px;">BEEN CATERING BUFFET</div>
     <nav>
         <a href="#servicio">Servicio</a>
         <a href="#platillos">Platillos</a>
@@ -110,17 +144,24 @@
     </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-    <img src="logo.png" alt="Logo" />
-    <p>¿Buscas una forma deliciosa y sin complicaciones de alimentar a tus invitados? Nuestro servicio de catering buffet te ofrece una amplia variedad de platillos sabrosos y frescos, presentados de forma atractiva para todo tipo de eventos.</p>
+    <img src="logo.png" alt="Logo Been Catering">
+    <p>
+        ¿Buscas una forma deliciosa y sin complicaciones de alimentar a tus invitados?  
+        Nuestro servicio de catering buffet te ofrece una amplia variedad de platillos frescos, deliciosos y presentados con estilo para cualquier tipo de evento.
+    </p>
 </section>
 
+<!-- SERVICIO -->
 <section id="servicio">
     <h2 class="titulo">Servicio de Buffet</h2>
+
     <div class="grid">
-        <img src="buffet.jpg" />
-        <div>
-            <p>Perfecto para fiestas, reuniones familiares, eventos empresariales y celebraciones especiales. Ofrecemos:</p>
+        <img src="buffet.jpg" style="border-radius:15px;">
+
+        <div class="card">
+            <p>Perfecto para fiestas, reuniones familiares, eventos empresariales y celebraciones especiales.</p>
             <ul>
                 <li>Montaje completo del buffet</li>
                 <li>Aguas frescas incluidas</li>
@@ -132,12 +173,14 @@
     </div>
 </section>
 
+<!-- PLATILLOS -->
 <section id="platillos">
     <h2 class="titulo">Platillos</h2>
 
     <div class="grid">
+
         <div class="card">
-            <img src="guisado1.jpg" />
+            <img src="guisado1.jpg">
             <h3>Guisados Tradicionales Mexicanos</h3>
             <ul>
                 <li>Chicharrón en salsa</li>
@@ -145,8 +188,9 @@
                 <li>Tinga de pollo o res</li>
             </ul>
         </div>
+
         <div class="card">
-            <img src="guisado2.jpg" />
+            <img src="guisado2.jpg">
             <h3>Platillos Vegetarianos</h3>
             <ul>
                 <li>Rajas con crema</li>
@@ -154,17 +198,19 @@
                 <li>Calabacitas</li>
             </ul>
         </div>
+
         <div class="card">
-            <img src="sandwich.jpg" />
-            <h3>Adicionales para tu Buffet</h3>
+            <img src="sandwich.jpg">
+            <h3>Adicionales</h3>
             <ul>
                 <li>Variedad de salsas</li>
                 <li>Guarniciones</li>
                 <li>Opciones para niños</li>
             </ul>
         </div>
+
         <div class="card">
-            <img src="aguas.jpg" />
+            <img src="aguas.jpg">
             <h3>Aguas Frescas</h3>
             <ul>
                 <li>Limón con pepino</li>
@@ -173,13 +219,16 @@
                 <li>Tamarindo</li>
             </ul>
         </div>
+
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer id="contacto">
     <p>Contacto: 55-0000-0000 • beenbuffet@gmail.com</p>
 </footer>
 
+<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/5215500000000" target="_blank">WhatsApp</a>
 
 </body>
