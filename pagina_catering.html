@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Been Catering Buffet</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fafafa;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        header nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: #fff4e6;
+        }
+        .hero img {
+            width: 300px;
+        }
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 20px;
+        }
+
+        /* Secciones */
+        section {
+            padding: 50px;
+        }
+        .titulo {
+            font-size: 40px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        /* Grid imágenes + texto */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: start;
+        }
+        .grid img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Tarjetas */
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* WhatsApp */
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">BEEN CATERING BUFFET</div>
+    <nav>
+        <a href="#servicio">Servicio</a>
+        <a href="#platillos">Platillos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <img src="logo.png" alt="Logo" />
+    <p>¿Buscas una forma deliciosa y sin complicaciones de alimentar a tus invitados? Nuestro servicio de catering buffet te ofrece una amplia variedad de platillos sabrosos y frescos, presentados de forma atractiva para todo tipo de eventos.</p>
+</section>
+
+<section id="servicio">
+    <h2 class="titulo">Servicio de Buffet</h2>
+    <div class="grid">
+        <img src="buffet.jpg" />
+        <div>
+            <p>Perfecto para fiestas, reuniones familiares, eventos empresariales y celebraciones especiales. Ofrecemos:</p>
+            <ul>
+                <li>Montaje completo del buffet</li>
+                <li>Aguas frescas incluidas</li>
+                <li>Guisados a elegir</li>
+                <li>Guarniciones variadas</li>
+                <li>Opciones para niños</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="platillos">
+    <h2 class="titulo">Platillos</h2>
+
+    <div class="grid">
+        <div class="card">
+            <img src="guisado1.jpg" />
+            <h3>Guisados Tradicionales Mexicanos</h3>
+            <ul>
+                <li>Chicharrón en salsa</li>
+                <li>Pipían verde/rojo</li>
+                <li>Tinga de pollo o res</li>
+            </ul>
+        </div>
+        <div class="card">
+            <img src="guisado2.jpg" />
+            <h3>Platillos Vegetarianos</h3>
+            <ul>
+                <li>Rajas con crema</li>
+                <li>Hongos a la mexicana</li>
+                <li>Calabacitas</li>
+            </ul>
+        </div>
+        <div class="card">
+            <img src="sandwich.jpg" />
+            <h3>Adicionales para tu Buffet</h3>
+            <ul>
+                <li>Variedad de salsas</li>
+                <li>Guarniciones</li>
+                <li>Opciones para niños</li>
+            </ul>
+        </div>
+        <div class="card">
+            <img src="aguas.jpg" />
+            <h3>Aguas Frescas</h3>
+            <ul>
+                <li>Limón con pepino</li>
+                <li>Horchata</li>
+                <li>Jamaica</li>
+                <li>Tamarindo</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer id="contacto">
+    <p>Contacto: 55-0000-0000 • beenbuffet@gmail.com</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5215500000000" target="_blank">WhatsApp</a>
+
+</body>
+</html>
