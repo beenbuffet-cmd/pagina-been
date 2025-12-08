@@ -6,230 +6,35 @@
     <title>Been Catering Buffet</title>
 
     <style>
-        /* ------- ESTILOS GENERALES -------- */
-        body {
+        * {
             margin: 0;
-            font-family: "Poppins", Arial, sans-serif;
-            background: #FFF7ED;
-            color: #1B3A2F;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
-        h1, h2, h3 {
-            font-weight: 700;
-        }
-
-        /* ------- HEADER -------- */
-        header {
-            background: white;
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        header nav a {
-            margin-left: 25px;
-            text-decoration: none;
-            color: #1B3A2F;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        header nav a:hover {
-            color: #D4A056;
-        }
-
-        /* ------- HERO -------- */
-        .hero {
-            text-align: center;
-            padding: 70px 20px;
-        }
-
-        .hero img {
-            width: 280px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            max-width: 800px;
-            margin: 20px auto;
+        body {
+            background: #f4f4f4;
             color: #333;
         }
 
-        /* ------- TITULOS -------- */
-        .titulo {
-            font-size: 40px;
-            text-align: center;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .titulo::after {
-            content: "";
-            width: 80px;
-            height: 4px;
-            background: #D4A056;
-            display: block;
-            margin: 10px auto;
-            border-radius: 5px;
-        }
-
-        /* ------- GRID -------- */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+        /* HEADER */
+        header {
+            background: #111;
             padding: 20px;
-        }
-
-        /* ------- TARJETAS / CARDS -------- */
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card img {
-            width: 100%;
-            border-radius: 12px;
-            margin-bottom: 15px;
-        }
-
-        /* ------- WHATSAPP -------- */
-        .whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             color: white;
-            padding: 15px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        /* ------- FOOTER -------- */
-        footer {
-            background: #1B3A2F;
-            color: white;
-            text-align: center;
-            padding: 30px;
-            margin-top: 60px;
+        header .logo {
+            font-size: 22px;
+            font-weight: 800;
         }
 
-    </style>
+        nav a {
 
-</head>
-<body>
-
-<!-- HEADER -->
-<header>
-    <div class="logo" style="font-weight:800; font-size:22px;">BEEN CATERING BUFFET</div>
-    <nav>
-        <a href="#servicio">Servicio</a>
-        <a href="#platillos">Platillos</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-    <img src="logo.png" alt="Logo Been Catering">
-    <p>
-        ¿Buscas una forma deliciosa y sin complicaciones de alimentar a tus invitados?  
-        Nuestro servicio de catering buffet te ofrece una amplia variedad de platillos frescos, deliciosos y presentados con estilo para cualquier tipo de evento.
-    </p>
-</section>
-
-<!-- SERVICIO -->
-<section id="servicio">
-    <h2 class="titulo">Servicio de Buffet</h2>
-
-    <div class="grid">
-        <img src="buffet.jpg" style="border-radius:15px;">
-
-        <div class="card">
-            <p>Perfecto para fiestas, reuniones familiares, eventos empresariales y celebraciones especiales.</p>
-            <ul>
-                <li>Montaje completo del buffet</li>
-                <li>Aguas frescas incluidas</li>
-                <li>Guisados a elegir</li>
-                <li>Guarniciones variadas</li>
-                <li>Opciones para niños</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<!-- PLATILLOS -->
-<section id="platillos">
-    <h2 class="titulo">Platillos</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <img src="guisado1.jpg">
-            <h3>Guisados Tradicionales Mexicanos</h3>
-            <ul>
-                <li>Chicharrón en salsa</li>
-                <li>Pipían verde/rojo</li>
-                <li>Tinga de pollo o res</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <img src="guisado2.jpg">
-            <h3>Platillos Vegetarianos</h3>
-            <ul>
-                <li>Rajas con crema</li>
-                <li>Hongos a la mexicana</li>
-                <li>Calabacitas</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <img src="sandwich.jpg">
-            <h3>Adicionales</h3>
-            <ul>
-                <li>Variedad de salsas</li>
-                <li>Guarniciones</li>
-                <li>Opciones para niños</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <img src="aguas.jpg">
-            <h3>Aguas Frescas</h3>
-            <ul>
-                <li>Limón con pepino</li>
-                <li>Horchata</li>
-                <li>Jamaica</li>
-                <li>Tamarindo</li>
-            </ul>
-        </div>
-
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer id="contacto">
-    <p>Contacto: 55-0000-0000 • beenbuffet@gmail.com</p>
-</footer>
-
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/5215500000000" target="_blank">WhatsApp</a>
-
-</body>
-</html>
