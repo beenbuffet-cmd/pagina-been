@@ -1,344 +1,253 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Been Catering Buffet</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Been Catering Buffet</title>
 
-<!-- Tipografías opcionales (puedes dejar o quitar) -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #faf9f7;
+            color: #333;
+        }
 
-<!-- Font Awesome para iconos -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        header {
+            background: #ffffff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        header nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
 
-<style>
-  :root{
-    --crema: #FFF7ED;
-    --verde: #1B3A2F;
-    --dorado: #D4A056;
-    --gris: #444;
-    --blanco: #ffffff;
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0;
-    font-family:"Poppins", system-ui, Arial, sans-serif;
-    background:var(--crema);
-    color:var(--verde);
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-  }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: #ffe8cc;
+        }
+        .hero img {
+            width: 260px;
+        }
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 20px;
+        }
 
-  /* HEADER */
-  header{
-    background:var(--blanco);
-    border-bottom:1px solid rgba(0,0,0,0.06);
-    position:sticky;
-    top:0;
-    z-index:100;
-    box-shadow:0 2px 10px rgba(0,0,0,0.03);
-  }
-  .container{max-width:1100px;margin:0 auto;padding:0 20px}
-  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-  .logo{display:flex;align-items:center;gap:14px;font-weight:700;font-size:20px;color:var(--verde)}
-  .logo img{width:56px;height:56px;object-fit:contain;border-radius:8px}
-  nav{display:flex;gap:22px;align-items:center}
-  nav a{color:var(--verde);text-decoration:none;font-weight:600}
-  nav a:hover{color:var(--dorado)}
+        section {
+            padding: 50px 40px;
+        }
+        .titulo {
+            font-size: 35px;
+            margin-bottom: 20px;
+            color: #d98232;
+        }
 
-  /* HERO */
-  .hero{
-    display:flex;
-    align-items:center;
-    gap:30px;
-    padding:60px 20px;
-    background: linear-gradient(180deg, rgba(255,247,237,1) 0%, rgba(255,255,255,1) 100%);
-  }
-  .hero-left{flex:1;max-width:680px}
-  .hero-left h1{font-size:42px;margin-bottom:16px;line-height:1.02;color:var(--verde)}
-  .hero-left p{color:var(--gris);font-size:18px;margin-bottom:22px}
-  .cta-group{display:flex;gap:12px;flex-wrap:wrap}
-  .btn{
-    display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;
-  }
-  .btn-primary{background:var(--verde);color:var(--blanco);box-shadow:0 6px 18px rgba(27,58,47,0.12)}
-  .btn-outline{border:2px solid var(--dorado);color:var(--dorado);background:transparent}
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
 
-  .hero-right{flex-basis:360px;display:flex;justify-content:center}
-  .hero-img{width:320px;height:320px;border-radius:18px;object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+        /* WhatsApp */
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+        }
 
-  /* SECTIONS */
-  section{padding:50px 20px}
-  .titulo{max-width:1100px;margin:0 auto 24px;font-size:32px;text-align:center;color:var(--verde)}
-  .sub{color:var(--gris);max-width:900px;margin:10px auto 32px;text-align:center}
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
 
-  /* GRID - CARDS */
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;max-width:1100px;margin:0 auto}
-  .card{background:var(--blanco);border-radius:14px;padding:18px;box-shadow:0 8px 25px rgba(0,0,0,0.06);overflow:hidden}
-  .card img{width:100%;height:180px;object-fit:cover;border-radius:10px;margin-bottom:12px}
-  .card h3{margin:0 0 8px;color:var(--verde)}
-  .card p{color:var(--gris);margin:0 0 12px}
-  .list-dots{list-style:disc;margin-left:18px;color:var(--gris)}
-
-  /* FAQ */
-  .faq-item{background:var(--blanco);border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
-  .faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer}
-  .faq-a{margin-top:10px;color:var(--gris);display:none}
-
-  /* GALLERY */
-  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;max-width:1100px;margin:0 auto}
-  .gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-
-  /* CONTACT */
-  .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:30px;max-width:1100px;margin:0 auto;align-items:start}
-  .contact-card{background:var(--blanco);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.05)}
-  .contact-form label{display:block;margin-bottom:6px;color:var(--verde);font-weight:600}
-  .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e6e6;margin-bottom:12px}
-  .contact-info p{color:var(--gris);margin:6px 0}
-
-  /* FOOTER */
-  footer{background:var(--verde);color:var(--blanco);padding:28px 20px;margin-top:30px}
-  .footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:10px}
-  .socials{display:flex;gap:14px}
-  .socials a{color:var(--blanco);font-size:22px;text-decoration:none}
-  .copyright{font-size:14px;color:rgba(255,255,255,0.85)}
-
-  /* WhatsApp floating */
-  .wsp{
-    position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;
-    background:linear-gradient(135deg,#25d366,#1ebe5d);display:flex;justify-content:center;align-items:center;
-    color:#fff;font-size:28px;box-shadow:0 10px 30px rgba(0,0,0,0.2);z-index:1200;text-decoration:none
-  }
-
-  @media(max-width:900px){
-    .hero{flex-direction:column-reverse;text-align:center;padding:40px 20px}
-    .hero-right{flex-basis:auto}
-    .contact-grid{grid-template-columns:1fr}
-  }
-</style>
+        .social-links a {
+            margin: 0 10px;
+            color: #d98232;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- HEADER -->
 <header>
-  <div class="container header-inner">
-    <div class="logo">
-      <img src="logo.png" alt="Logo Been Catering">
-      <div>
-        <div style="font-size:16px">Been</div>
-        <div style="font-size:12px;color:#777">Catering Buffet</div>
-      </div>
-    </div>
-
-    <nav aria-label="Main navigation">
-      <a href="#servicio">Servicio</a>
-      <a href="#platillos">Platillos</a>
-      <a href="#galeria">Galería</a>
-      <a href="#faq">Preguntas</a>
-      <a href="#contacto">Contacto</a>
+    <div class="logo">BEEN CATERING BUFFET</div>
+    <nav>
+        <a href="#servicio">Servicio</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#menu">Menú</a>
+        <a href="#contacto">Contacto</a>
     </nav>
-  </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" aria-labelledby="hero-title">
-  <div class="container hero-left">
-    <h1 id="hero-title">Servicio de Catering Buffet para todo tipo de eventos</h1>
-    <p>Ofrecemos una experiencia culinaria memorable: guisados tradicionales, opciones vegetarianas, guarniciones, postres y aguas frescas. Servicio profesional, presentación impecable.</p>
-
-    <div class="cta-group">
-      <a class="btn btn-primary" href="https://wa.me/528138618819" target="_blank" rel="noopener">
-        <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
-      </a>
-      <a class="btn btn-outline" href="#contacto">Solicitar cotización</a>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <!-- Imagen principal (mejor usar una foto profesional de buffet) -->
-    <img class="hero-img" src="buffet.jpg" alt="Buffet de eventos">
-  </div>
+<section class="hero">
+    <img src="logo.png" alt="Logo" />
+    <p>Servicio de buffet americano para eventos familiares y sociales.  
+       Comida fresca, guisados caseros y servicio profesional.</p>
 </section>
 
 <!-- SERVICIO -->
 <section id="servicio">
-  <h2 class="titulo">Nuestra historia</h2>
-  <p class="sub">Been Catering nace de la pasión por la cocina casera y la presentación profesional. Desde banquetes íntimos hasta grandes eventos, nuestro objetivo es brindar sabor y comodidad a tus invitados.</p>
-
-  <div class="container">
-    <div class="grid" style="margin-top:22px">
-      <div class="card">
-        <img src="guisado1.jpg" alt="Guisado tradicional">
-        <h3>Guisados Tradicionales</h3>
-        <p>Recetas clásicas caseras preparadas con ingredientes frescos y mucho cariño.</p>
-        <ul class="list-dots">
-          <li>Chicharrón en salsa</li>
-          <li>Pipían verde / rojo</li>
-          <li>Tinga de pollo o res</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <img src="guisado2.jpg" alt="Platillo vegetariano">
-        <h3>Opciones Vegetarianas</h3>
-        <p>Platos ligeros y sabrosos para atender todos los gustos.</p>
-        <ul class="list-dots">
-          <li>Rajas con crema</li>
-          <li>Calabacitas a la mexicana</li>
-          <li>Verduras salteadas</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <img src="sandwich.jpg" alt="Adicionales">
-        <h3>Adicionales</h3>
-        <p>Variedad de salsas, guarniciones y opciones para niños.</p>
-        <ul class="list-dots">
-          <li>Guarniciones</li>
-          <li>Opciones para niños</li>
-          <li>Variedad de salsas</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <img src="aguas.jpg" alt="Aguas frescas">
-        <h3>Aguas Frescas y Bebidas</h3>
-        <p>Aguas naturales con sabores tradicionales: horchata, jamaica, tamarindo y más.</p>
-        <ul class="list-dots">
-          <li>Horchata</li>
-          <li>Jamaica</li>
-          <li>Tamarindo</li>
-        </ul>
-      </div>
+    <h2 class="titulo">Servicio de Buffet</h2>
+    <div class="grid">
+        <div>
+            <p>Incluye:</p>
+            <ul>
+                <li>Montaje de mesa buffet</li>
+                <li>Guarniciones incluidas</li>
+                <li>Arroz o pasta (variedad a elegir)</li>
+                <li>Aguas frescas y café incluidos</li>
+                <li>Opciones adicionales según evento</li>
+            </ul>
+        </div>
+        <img src="buffet.jpg" alt="Buffet" />
     </div>
-  </div>
 </section>
 
-<!-- GALLERY -->
-<section id="galeria">
-  <h2 class="titulo">Galería</h2>
-  <p class="sub">Imágenes reales de eventos y montajes que hemos realizado.</p>
-  <div class="gallery container" aria-hidden="false">
-    <img src="guisado3.jpg" alt="Plato 1">
-    <img src="guisado1.jpg" alt="Plato 2">
-    <img src="buffet.jpg" alt="Buffet">
-    <img src="sandwich.jpg" alt="Sandwiches">
-    <img src="aguas.jpg" alt="Bebidas">
-    <img src="guisado2.jpg" alt="Plato 3">
-  </div>
+<!-- PAQUETES -->
+<section id="paquetes">
+    <h2 class="titulo">Paquetes de Buffet</h2>
+    <p>*Precios aproximados — pueden variar según zona y fecha*</p>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Paquete Básico – 4 Guisados</h3>
+            <p><strong>Recomendado para 30–80 personas</strong></p>
+            <ul>
+                <li>4 guisados a elegir</li>
+                <li>Arroz o pasta</li>
+                <li>2 guarniciones</li>
+                <li>Aguas frescas + café</li>
+            </ul>
+            <p><strong>Precio aprox: $135 – $150 por persona</strong></p>
+        </div>
+
+        <div class="card">
+            <h3>Paquete Medio – 5 Guisados</h3>
+            <p><strong>Ideal para 100–150 personas</strong></p>
+            <ul>
+                <li>5 guisados a elegir</li>
+                <li>Arroz o pasta</li>
+                <li>2 guarniciones</li>
+                <li>Aguas frescas + café</li>
+            </ul>
+            <p><strong>Precio aprox: $145 – $160 por persona</strong></p>
+        </div>
+
+        <div class="card">
+            <h3>Paquete Premium – 8 Guisados</h3>
+            <p><strong>Perfecto para 200 personas</strong></p>
+            <ul>
+                <li>8 variedades colocadas en charolas balanceadas</li>
+                <li>Arroz o pasta</li>
+                <li>3 guarniciones</li>
+                <li>Aguas frescas + café</li>
+            </ul>
+            <p><strong>Precio aprox: $155 – $175 por persona</strong></p>
+        </div>
+    </div>
+
+    <p style="margin-top:20px;">
+        *Si deseas más variedad de guisados, podemos agregar opciones adicionales con costo extra.*
+    </p>
 </section>
 
-<!-- FAQ -->
-<section id="faq">
-  <h2 class="titulo">Preguntas Frecuentes</h2>
-  <div class="container" style="max-width:900px">
-    <div class="faq-item">
-      <div class="faq-q" data-open="false">
-        <strong>¿Con cuánto tiempo de anticipación debo contratar?</strong>
-        <span class="toggle-icon">+</span>
-      </div>
-      <div class="faq-a">Recomendamos contratar con al menos 7 días de anticipación para garantizar disponibilidad en fechas populares.</div>
-    </div>
+<!-- MENU -->
+<section id="menu">
+    <h2 class="titulo">Menú General</h2>
 
-    <div class="faq-item">
-      <div class="faq-q" data-open="false">
-        <strong>¿Puedo elegir los guisados?</strong>
-        <span class="toggle-icon">+</span>
-      </div>
-      <div class="faq-a">Sí. Ofrecemos menús personalizables y te asesoramos para elegir las mejores combinaciones.</div>
-    </div>
+    <h3>Guisados Principales</h3>
+    <ul>
+        <li>Chicharrón en salsa verde</li>
+        <li>Pipían verde/rojo</li>
+        <li>Tinga de pollo o res</li>
+        <li>Rajas con crema</li>
+        <li>Calabacitas</li>
+    </ul>
 
-    <div class="faq-item">
-      <div class="faq-q" data-open="false">
-        <strong>¿Incluyen meseros y servicio?</strong>
-        <span class="toggle-icon">+</span>
-      </div>
-      <div class="faq-a">Ofrecemos opción con montaje y atención por meseros con costo adicional. Consultar paquetes.</div>
-    </div>
-  </div>
+    <h3>Arroces y Pastas (incluidos)</h3>
+    <ul>
+        <li>Arroz rojo</li>
+        <li>Arroz verde con elote</li>
+        <li>Pasta cremosa</li>
+        <li>Pasta a la mexicana</li>
+        <li>Coditos con crema</li>
+    </ul>
+
+    <h3>Adicionales</h3>
+    <ul>
+        <li><strong>Menú Navideño: </strong>pierna mechada, pavo, lomo adobado</li>
+        <li><strong>Pescados premium: </strong>filetes, empapelados, salsas especiales</li>
+        <li>Mesas de snacks (extra)</li>
+        <li>Mesas de postres (extra)</li>
+    </ul>
+
+    <h3>Bebidas</h3>
+    <ul>
+        <li>Aguas frescas</li>
+        <li>Café incluido</li>
+        <li>*No ofrecemos bebidas alcohólicas*</li>
+    </ul>
 </section>
 
-<!-- CONTACT -->
-<section id="contacto">
-  <h2 class="titulo">Contacto y Cotizaciones</h2>
-  <p class="sub">Escríbenos y con gusto armamos un paquete a la medida de tu evento.</p>
-
-  <div class="container contact-grid">
-    <div class="contact-card contact-form">
-      <form action="#" onsubmit="alert('Gracias — tu mensaje se envió (ejemplo).'); return false;">
-        <label for="name">Nombre</label>
-        <input id="name" name="name" required placeholder="Tu nombre">
-
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required placeholder="correo@ejemplo.com">
-
-        <label for="people">Número de invitados (estimado)</label>
-        <input id="people" name="people" placeholder="Ej. 50">
-
-        <label for="message">Mensaje / Detalles del evento</label>
-        <textarea id="message" name="message" rows="5" placeholder="Fecha, tipo de evento, lugar..."></textarea>
-
-        <button class="btn btn-primary" type="submit" style="margin-top:8px">Enviar</button>
-      </form>
-    </div>
-
-    <div class="contact-card contact-info">
-      <h3 style="margin-top:0;color:var(--verde)">Información</h3>
-      <p class="contact-item"><strong>Teléfono / WhatsApp:</strong> <a href="https://wa.me/528138618819" target="_blank" rel="noopener">+528138618819</a></p>
-      <p class="contact-item"><strong>Email:</strong> beenbuffet@gmail.com</p>
-      <p class="contact-item"><strong>Horario:</strong> Lun-Vie. 9:00 - 18:00</p>
-      <p style="margin-top:14px;color:var(--gris)">Podemos desplazarnos a tu evento - solicítanos paquete con montaje.</p>
-    </div>
-  </div>
+<!-- HORARIOS Y SEGURIDAD -->
+<section>
+    <h2 class="titulo">Horarios y Seguridad</h2>
+    <p>✔ No cubrimos eventos de madrugada ni horarios exagerados.</p>
+    <p>✔ No atendemos eventos con alto consumo de alcohol.</p>
+    <p>✔ Servicio diseñado para eventos familiares, empresariales y sociales tranquilos.</p>
+    <p>✔ Nuestro objetivo es operar con seguridad y profesionalismo para todos.</p>
+    <p>✔ Consulta si cubrimos tu zona, ya que depende del evento y distancia.</p>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="logo-small" style="display:flex;align-items:center;gap:10px">
-      <img src="logo.png" alt="Logo" style="width:48px;height:48px;object-fit:cover;border-radius:8px">
-      <div style="font-weight:700">Been Catering Buffet</div>
+<!-- CONTACTO -->
+<footer id="contacto">
+    <h3>Contacto</h3>
+    <p>Tel: 813 861 8819</p>
+    <p>Email: beenbuffet@gmail.com</p>
+
+    <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61584705306004" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/been.buffet/" target="_blank">Instagram</a>
     </div>
 
-    <div class="socials" aria-label="Redes sociales">
-      <!-- CAMBIA LOS HREF A TUS REDES REALES -->
-      <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="#" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-      <a href="https://wa.me/528138618819" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-    </div>
-
-    <div class="copyright">© <span id="year"></span> Been Catering Buffet</div>
-  </div>
+    <p>© 2025 Been Catering Buffet</p>
 </footer>
 
-<!-- WHATSAPP FLOTANTE - reemplaza el número por el tuyo -->
-<a class="wsp" href="https://wa.me/528138618819" target="_blank" aria-label="WhatsApp">
-  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-</a>
+<a class="whatsapp" href="https://wa.me/528138618819" target="_blank">WhatsApp</a>
 
-<script>
-  // año dinámico
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // FAQ: toggle simple
-  document.querySelectorAll('.faq-q').forEach(function(q){
-    q.addEventListener('click', function(){
-      let open = this.getAttribute('data-open') === 'true';
-      this.setAttribute('data-open', !open);
-      this.querySelector('.toggle-icon').textContent = open ? '+' : '−';
-      let a = this.nextElementSibling;
-      if(!open){ a.style.display = 'block'; } else { a.style.display = 'none'; }
-    });
-  });
-
-  // Optional: lazy load images
-  document.querySelectorAll('img').forEach(img=>{
-    img.loading = 'lazy';
-  });
-
-</script>
 </body>
 </html>
