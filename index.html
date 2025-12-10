@@ -1,253 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Been Catering Buffet</title>
+<meta charset="UTF-8">
+<title>BEEN Buffet & Catering</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        background: #FFF7F2;
+        color: #222;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #faf9f7;
-            color: #333;
-        }
+    header {
+        background: linear-gradient(90deg, #FF8A6C, #FFBB99);
+        padding: 25px;
+        text-align: center;
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
 
-        header {
-            background: #ffffff;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        header nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
+    section {
+        padding: 25px;
+        max-width: 900px;
+        margin: auto;
+    }
 
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: #ffe8cc;
-        }
-        .hero img {
-            width: 260px;
-        }
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            font-size: 20px;
-        }
+    h2 {
+        color: #FF6F4E;
+        border-left: 6px solid #FF6F4E;
+        padding-left: 12px;
+    }
 
-        section {
-            padding: 50px 40px;
-        }
-        .titulo {
-            font-size: 35px;
-            margin-bottom: 20px;
-            color: #d98232;
-        }
+    .paquete {
+        background: white;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        border-left: 6px solid #FF8A6C;
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-        .card img {
-            width: 100%;
-            border-radius: 10px;
-        }
+    .precio {
+        font-size: 20px;
+        font-weight: bold;
+        color: #FF6F4E;
+    }
 
-        /* WhatsApp */
-        .whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25d366;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 18px;
-        }
+    .social-box {
+        text-align: center;
+        padding: 25px;
+    }
 
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-        }
+    .social-box a {
+        margin: 0 10px;
+        font-size: 20px;
+        color: #FF6F4E;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-        .social-links a {
-            margin: 0 10px;
-            color: #d98232;
-            font-weight: bold;
-            text-decoration: none;
-        }
-    </style>
+    footer {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 30px;
+    }
+</style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">BEEN CATERING BUFFET</div>
-    <nav>
-        <a href="#servicio">Servicio</a>
-        <a href="#paquetes">Paquetes</a>
-        <a href="#menu">Menú</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+    BEEN • Buffet & Catering
 </header>
 
-<section class="hero">
-    <img src="logo.png" alt="Logo" />
-    <p>Servicio de buffet americano para eventos familiares y sociales.  
-       Comida fresca, guisados caseros y servicio profesional.</p>
-</section>
-
-<!-- SERVICIO -->
-<section id="servicio">
-    <h2 class="titulo">Servicio de Buffet</h2>
-    <div class="grid">
-        <div>
-            <p>Incluye:</p>
-            <ul>
-                <li>Montaje de mesa buffet</li>
-                <li>Guarniciones incluidas</li>
-                <li>Arroz o pasta (variedad a elegir)</li>
-                <li>Aguas frescas y café incluidos</li>
-                <li>Opciones adicionales según evento</li>
-            </ul>
-        </div>
-        <img src="buffet.jpg" alt="Buffet" />
-    </div>
-</section>
-
-<!-- PAQUETES -->
-<section id="paquetes">
-    <h2 class="titulo">Paquetes de Buffet</h2>
-    <p>*Precios aproximados — pueden variar según zona y fecha*</p>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>Paquete Básico – 4 Guisados</h3>
-            <p><strong>Recomendado para 30–80 personas</strong></p>
-            <ul>
-                <li>4 guisados a elegir</li>
-                <li>Arroz o pasta</li>
-                <li>2 guarniciones</li>
-                <li>Aguas frescas + café</li>
-            </ul>
-            <p><strong>Precio aprox: $135 – $150 por persona</strong></p>
-        </div>
-
-        <div class="card">
-            <h3>Paquete Medio – 5 Guisados</h3>
-            <p><strong>Ideal para 100–150 personas</strong></p>
-            <ul>
-                <li>5 guisados a elegir</li>
-                <li>Arroz o pasta</li>
-                <li>2 guarniciones</li>
-                <li>Aguas frescas + café</li>
-            </ul>
-            <p><strong>Precio aprox: $145 – $160 por persona</strong></p>
-        </div>
-
-        <div class="card">
-            <h3>Paquete Premium – 8 Guisados</h3>
-            <p><strong>Perfecto para 200 personas</strong></p>
-            <ul>
-                <li>8 variedades colocadas en charolas balanceadas</li>
-                <li>Arroz o pasta</li>
-                <li>3 guarniciones</li>
-                <li>Aguas frescas + café</li>
-            </ul>
-            <p><strong>Precio aprox: $155 – $175 por persona</strong></p>
-        </div>
-    </div>
-
-    <p style="margin-top:20px;">
-        *Si deseas más variedad de guisados, podemos agregar opciones adicionales con costo extra.*
+<section>
+    <h2>¿Quiénes Somos?</h2>
+    <p>
+        En <strong>BEEN</strong> ofrecemos servicio de buffet para eventos familiares, sociales y empresariales.
+        Cuidamos la presentación, el sabor y el montaje para que tu evento luzca profesional y completo.
     </p>
 </section>
 
-<!-- MENU -->
-<section id="menu">
-    <h2 class="titulo">Menú General</h2>
-
-    <h3>Guisados Principales</h3>
-    <ul>
-        <li>Chicharrón en salsa verde</li>
-        <li>Pipían verde/rojo</li>
-        <li>Tinga de pollo o res</li>
-        <li>Rajas con crema</li>
-        <li>Calabacitas</li>
-    </ul>
-
-    <h3>Arroces y Pastas (incluidos)</h3>
-    <ul>
-        <li>Arroz rojo</li>
-        <li>Arroz verde con elote</li>
-        <li>Pasta cremosa</li>
-        <li>Pasta a la mexicana</li>
-        <li>Coditos con crema</li>
-    </ul>
-
-    <h3>Adicionales</h3>
-    <ul>
-        <li><strong>Menú Navideño: </strong>pierna mechada, pavo, lomo adobado</li>
-        <li><strong>Pescados premium: </strong>filetes, empapelados, salsas especiales</li>
-        <li>Mesas de snacks (extra)</li>
-        <li>Mesas de postres (extra)</li>
-    </ul>
-
-    <h3>Bebidas</h3>
-    <ul>
-        <li>Aguas frescas</li>
-        <li>Café incluido</li>
-        <li>*No ofrecemos bebidas alcohólicas*</li>
-    </ul>
-</section>
-
-<!-- HORARIOS Y SEGURIDAD -->
 <section>
-    <h2 class="titulo">Horarios y Seguridad</h2>
-    <p>✔ No cubrimos eventos de madrugada ni horarios exagerados.</p>
-    <p>✔ No atendemos eventos con alto consumo de alcohol.</p>
-    <p>✔ Servicio diseñado para eventos familiares, empresariales y sociales tranquilos.</p>
-    <p>✔ Nuestro objetivo es operar con seguridad y profesionalismo para todos.</p>
-    <p>✔ Consulta si cubrimos tu zona, ya que depende del evento y distancia.</p>
+    <h2>Paquetes Sugeridos (200 personas)</h2>
+
+    <div class="paquete">
+        <h3>Paquete Esencial</h3>
+        <p>✔ 3 platillos principales</p>
+        <p>✔ 1–2 guarniciones</p>
+        <p>✔ Pan o tortillas</p>
+        <p>✔ Montaje y servicio</p>
+        <p class="precio">$48,000 – $55,000 aprox.</p>
+    </div>
+
+    <div class="paquete">
+        <h3>Paquete Recomendado</h3>
+        <p>✔ 5 platillos principales</p>
+        <p>✔ 2 guarniciones</p>
+        <p>✔ Panadería / complementos</p>
+        <p>✔ Montaje + servicio + reposición</p>
+        <p class="precio">$65,000 – $72,000 aprox.</p>
+    </div>
+
+    <div class="paquete">
+        <h3>Paquete Plus (Mayor variedad)</h3>
+        <p>✔ 6 a 8 platillos principales</p>
+        <p>✔ 3 guarniciones</p>
+        <p>✔ Panadería / complementos</p>
+        <p>✔ Montaje, servicio y apoyo general</p>
+        <p class="precio">$78,000 – $90,000 aprox.</p>
+    </div>
 </section>
 
-<!-- CONTACTO -->
-<footer id="contacto">
-    <h3>Contacto</h3>
-    <p>Tel: 813 861 8819</p>
-    <p>Email: beenbuffet@gmail.com</p>
+<section>
+    <h2>Adicionales</h2>
+    <p>➕ Menú Navideño: pavo, pierna, lomo, ensaladas.</p>
+    <p>➕ Especialidades de pescado (filetes premium).</p>
+    <p>➕ Servicio de café.</p>
+    <p>➕ Mesa de snacks y mesa de postres (servicios independientes).</p>
+</section>
 
-    <div class="social-links">
+<section>
+    <h2>Guarniciones</h2>
+    <p>✔ Arroz a elegir</p>
+    <p>✔ Pastas</p>
+    <p>✔ Ensaladas</p>
+    <p>✔ Verduras</p>
+    <p>✔ Opciones según platillo</p>
+</section>
+
+<section>
+    <h2>Condiciones del Servicio</h2>
+    <p>🚫 No ofrecemos bebidas alcohólicas.</p>
+    <p>🚫 No cubrimos eventos de madrugada o con horarios excesivos.</p>
+    <p>🚫 No cubrimos eventos donde se comprometa la seguridad del personal.</p>
+</section>
+
+<section>
+    <h2>Zona de Cobertura</h2>
+    <p>📍 Cubrimos varias zonas de CDMX y área metropolitana.</p>
+    <p><strong>Pregunta si cubrimos tu ubicación.</strong></p>
+</section>
+
+<section>
+    <h2>Contacto y Redes Sociales</h2>
+
+    <div class="social-box">
+        <p><strong>WhatsApp: <a href="https://wa.me/5218138618819" target="_blank">8138618819</a></strong></p>
+
         <a href="https://www.facebook.com/profile.php?id=61584705306004" target="_blank">Facebook</a>
         <a href="https://www.instagram.com/been.buffet/" target="_blank">Instagram</a>
     </div>
+</section>
 
-    <p>© 2025 Been Catering Buffet</p>
+<section>
+    <h2>¿Quieres Cotizar?</h2>
+    <p>Envíanos por WhatsApp:</p>
+    <p>• Zona del evento<br>
+       • Fecha<br>
+       • Número de invitados<br>
+       • Paquete de tu interés</p>
+</section>
+
+<footer>
+    BEEN • Servicio de Buffet y Catering
 </footer>
-
-<a class="whatsapp" href="https://wa.me/528138618819" target="_blank">WhatsApp</a>
 
 </body>
 </html>
