@@ -1,254 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Been Catering Buffet</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Been Catering Buffet</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #faf9f7;
-            color: #333;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #fafafa;
+        color: #333;
+    }
 
-        header {
-            background: #ffffff;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        header nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
+    :root {
+        --verde: #1B3A2F;
+        --arena: #F2E4C6;
+        --crema: #FFF7EA;
+        --dorado: #C8A96A;
+    }
 
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: #ffe8cc;
-        }
-        .hero img {
-            width: 260px;
-        }
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            font-size: 20px;
-        }
+    header {
+        background: white;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
 
-        section {
-            padding: 50px 40px;
-        }
-        .titulo {
-            font-size: 35px;
-            margin-bottom: 20px;
-            color: #d98232;
-        }
+    header .logo {
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--verde);
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-        .card img {
-            width: 100%;
-            border-radius: 10px;
-        }
+    header nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: var(--verde);
+        font-weight: 600;
+    }
 
-        /* WhatsApp */
-        .whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25d366;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-        }
-
-        .social-links a {
-            margin: 0 10px;
-            color: #d98232;
-            font-weight: bold;
-            text-decoration: none;
-        }
-    </style>
-</head>
-
-<body>
-
-<header>
-    <div class="logo">BEEN CATERING BUFFET</div>
-    <nav>
-        <a href="#servicio">Servicio</a>
-        <a href="#paquetes">Paquetes</a>
-        <a href="#menu">Menú</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <img src="logo.png" alt="Logo" />
-    <p>Servicio de buffet americano para eventos familiares y sociales.  
-       Comida fresca, guisados caseros y servicio profesional.</p>
-</section>
-
-<!-- SERVICIO -->
-<section id="servicio">
-    <h2 class="titulo">Servicio de Buffet</h2>
-    <div class="grid">
-        <div>
-            <p>Incluye:</p>
-            <ul>
-                <li>Montaje de mesa buffet</li>
-                <li>Guarniciones incluidas</li>
-                <li>Arroz o pasta (variedad a elegir)</li>
-                <li>Aguas frescas y café incluidos</li>
-                <li>Opciones adicionales según evento</li>
-            </ul>
-        </div>
-        <img src="buffet.jpg" alt="Buffet" />
-    </div>
-</section>
-
-<!-- PAQUETES -->
-<section id="paquetes">
-    <h2 class="titulo">Paquetes de Buffet</h2>
-    <p>*Precios aproximados — pueden variar según zona y fecha*</p>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>Paquete Básico – 4 Guisados</h3>
-            <p><strong>Recomendado para 30–80 personas</strong></p>
-            <ul>
-                <li>4 guisados a elegir</li>
-                <li>Arroz o pasta</li>
-                <li>2 guarniciones</li>
-                <li>Aguas frescas + café</li>
-            </ul>
-            <p><strong>Precio aprox: $135 – $150 por persona</strong></p>
-        </div>
-
-        <div class="card">
-            <h3>Paquete Medio – 5 Guisados</h3>
-            <p><strong>Ideal para 100–150 personas</strong></p>
-            <ul>
-                <li>5 guisados a elegir</li>
-                <li>Arroz o pasta</li>
-                <li>2 guarniciones</li>
-                <li>Aguas frescas + café</li>
-            </ul>
-            <p><strong>Precio aprox: $145 – $160 por persona</strong></p>
-        </div>
-
-        <div class="card">
-            <h3>Paquete Premium – 8 Guisados</h3>
-            <p><strong>Perfecto para 200 personas</strong></p>
-            <ul>
-                <li>8 variedades colocadas en charolas balanceadas</li>
-                <li>Arroz o pasta</li>
-                <li>3 guarniciones</li>
-                <li>Aguas frescas + café</li>
-            </ul>
-            <p><strong>Precio aprox: $155 – $175 por persona</strong></p>
-        </div>
-    </div>
-
-    <p style="margin-top:20px;">
-        *Si deseas más variedad de guisados, podemos agregar opciones adicionales con costo extra.*
-    </p>
-</section>
-
-<!-- MENU -->
-<section id="menu">
-    <h2 class="titulo">Menú General</h2>
-
-    <h3>Guisados Principales</h3>
-    <ul>
-        <li>Chicharrón en salsa verde</li>
-        <li>Pipían verde/rojo</li>
-        <li>Tinga de pollo o res</li>
-        <li>Rajas con crema</li>
-        <li>Calabacitas</li>
-    </ul>
-
-    <h3>Arroces y Pastas (incluidos)</h3>
-    <ul>
-        <li>Arroz rojo</li>
-        <li>Arroz verde con elote</li>
-        <li>Pasta cremosa</li>
-        <li>Pasta a la mexicana</li>
-        <li>Coditos con crema</li>
-    </ul>
-
-    <h3>Adicionales</h3>
-    <ul>
-        <li><strong>Menú Navideño: </strong>pierna mechada, pavo, lomo adobado</li>
-        <li><strong>Pescados premium: </strong>filetes, empapelados, salsas especiales</li>
-        <li>Mesas de snacks (extra)</li>
-        <li>Mesas de postres (extra)</li>
-    </ul>
-
-    <h3>Bebidas</h3>
-    <ul>
-        <li>Aguas frescas</li>
-        <li>Café incluido</li>
-        <li>*No ofrecemos bebidas alcohólicas*</li>
-    </ul>
-</section>
-
-<!-- HORARIOS Y SEGURIDAD -->
-<section>
-    <h2 class="titulo">Horarios y Seguridad</h2>
-    <p>✔ No cubrimos eventos de madrugada ni horarios exagerados.</p>
-    <p>✔ No atendemos eventos con alto consumo de alcohol.</p>
-    <p>✔ Servicio diseñado para eventos familiares, empresariales y sociales tranquilos.</p>
-    <p>✔ Nuestro objetivo es operar con seguridad y profesionalismo para todos.</p>
-    <p>✔ Consulta si cubrimos tu zona, ya que depende del evento y distancia.</p>
-</section>
-
-<!-- CONTACTO -->
-<footer id="contacto">
-    <h3>Contacto</h3>
-    <p>Tel: 813 861 8819</p>
-    <p>Email: beenbuffet@gmail.com</p>
-
-    <div class="social-links">
-        <a href="https://www.facebook.com/profile.php?id=61584705306004" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/been.buffet/" target="_blank">Instagram</a>
-    </div>
-
-    <p>© 2025 Been Catering Buffet</p>
-</footer>
-
-<a class="whatsapp" href="https://wa.me/528138618819" target="_blank">WhatsApp</a>
-
-</body>
-</html>
-
+    .hero {
+        display: flex;
+        padding: 40px 40px;
+        justify-content: space-between;
+        al
