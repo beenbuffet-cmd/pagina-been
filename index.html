@@ -5,312 +5,295 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Been Catering Buffet</title>
 
+<!-- ICONOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #fafafa;
-        color: #333;
-    }
-
-    :root {
-        --verde: #1B3A2F;
-        --arena: #F2E4C6;
-        --crema: #FFF7EA;
-        --dorado: #C8A96A;
-    }
-
-    header {
-        background: white;
-        padding: 15px 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        position: sticky;
-        top: 0;
-        z-index: 999;
-    }
-
-    header .logo {
-        font-size: 22px;
-        font-weight: 800;
-        color: var(--verde);
-    }
-
-    header nav a {
-        margin-left: 20px;
-        text-decoration: none;
-        color: var(--verde);
-        font-weight: 600;
-    }
-
-    .hero {
-        display: flex;
-        padding: 40px 40px;
-        justify-content: space-between;
-        align-items: center;
-        background: var(--crema);
-        flex-wrap: wrap;
-    }
-
-    .hero img {
-        width: 360px;
-        border-radius: 12px;
-    }
-
-    .hero h1 {
-        color: var(--verde);
-        font-size: 34px;
-        margin-bottom: 10px;
-    }
-
-    .btn-w {
-        display: inline-block;
-        background: var(--verde);
-        padding: 12px 20px;
-        color: white;
-        border-radius: 8px;
-        text-decoration: none;
-        margin-right: 10px;
-        font-weight: bold;
-    }
-
-    .btn-sec {
-        background: var(--arena);
-        color: var(--verde);
-        padding: 12px 20px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    section {
-        padding: 40px 30px;
-    }
-
-    h2 {
-        text-align: center;
-        font-size: 28px;
-        color: var(--verde);
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-        margin-top: 25px;
-    }
-
-    .card {
-        background: white;
-        border-radius: 14px;
-        padding: 20px;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-
-    .card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 12px;
-    }
-
-    /* PAQUETES */
-    .paquete {
-        background: white;
-        border-left: 6px solid var(--verde);
-        padding: 20px;
-        border-radius: 12px;
-        margin-bottom: 30px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .paquete h3 {
-        margin: 0;
-        color: var(--verde);
-    }
-
-    /* FORMULARIO */
-    form {
-        max-width: 450px;
-        margin: auto;
-        background: white;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    input, textarea {
-        width: 100%;
-        padding: 12px;
-        margin: 8px 0;
-        border-radius: 8px;
-        border: 1px solid #aaa;
-    }
-
-    footer {
-        background: var(--verde);
-        padding: 25px;
-        color: white;
-        text-align: center;
-        margin-top: 40px;
-    }
-
-    .social a {
-        color: white;
-        margin: 0 10px;
-        font-size: 20px;
-    }
+:root{
+  --verde:#1B3A2F;
+  --arena:#F2E4C6;
+  --crema:#FFF7EA;
+  --naranja:#E49B3C;
+}
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#fafafa;
+  color:#333;
+}
+header{
+  background:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:var(--verde);
+  font-weight:600;
+}
+.hero{
+  background:var(--crema);
+  padding:80px 30px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+.hero img{
+  width:100%;
+  border-radius:20px;
+}
+.btn{
+  padding:14px 22px;
+  border-radius:30px;
+  font-weight:bold;
+  text-decoration:none;
+  display:inline-block;
+  margin-right:10px;
+}
+.btn-whats{
+  background:var(--verde);
+  color:white;
+}
+.btn-outline{
+  border:2px solid var(--naranja);
+  color:var(--naranja);
+}
+section{
+  padding:70px 30px;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.card{
+  background:white;
+  border-radius:18px;
+  padding:20px;
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+  text-align:center;
+}
+.card img{
+  width:100%;
+  border-radius:15px;
+  margin-bottom:15px;
+}
+form{
+  max-width:600px;
+  margin:auto;
+}
+form input,
+form select,
+form textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+form button{
+  background:var(--verde);
+  color:white;
+  border:none;
+  padding:14px;
+  border-radius:30px;
+  font-size:16px;
+  width:100%;
+}
+footer{
+  background:var(--verde);
+  color:white;
+  padding:40px 20px;
+  text-align:center;
+}
+.social a{
+  color:white;
+  font-size:26px;
+  margin:0 12px;
+  text-decoration:none;
+}
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  box-shadow:0 4px 10px rgba(0,0,0,.3);
+  z-index:999;
+}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;}
+}
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-    <div class="logo">Been Catering Buffet</div>
-    <nav>
-        <a href="#servicio">Servicio</a>
-        <a href="#paquetes">Paquetes</a>
-        <a href="#galeria">Galería</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+  <strong>Been Catering Buffet</strong>
+  <nav>
+    <a href="#servicio">Servicio</a>
+    <a href="#paquetes">Paquetes</a>
+    <a href="#galeria">Galería</a>
+    <a href="#preguntas">Preguntas</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero">
-    <div>
-        <h1>Servicio de Catering Buffet para tus eventos</h1>
-        <p>Guisados caseros, variedad, excelente presentación, y atención profesional.</p>
+<section class="hero" id="servicio">
+  <div>
+    <h1>Servicio de Catering Buffet para todo tipo de eventos</h1>
+    <p>
+      Ofrecemos una experiencia culinaria memorable con guisados tradicionales,
+      excelente presentación y atención profesional.
+    </p>
+    <a class="btn btn-whats" href="https://wa.me/5218138618819" target="_blank">
+      <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+    </a>
+    <a class="btn btn-outline" href="#paquetes">
+      Solicitar cotización
+    </a>
+  </div>
+  <img src="buffet.jpg" alt="Buffet Been Catering">
+</section>
 
-        <a class="btn-w" href="https://wa.me/528138618819?text=Hola%20quiero%20información%20sobre%20los%20paquetes%20de%20buffet">
-            Cotizar por WhatsApp
-        </a>
+<!-- HISTORIA -->
+<section>
+  <h2 style="text-align:center;color:var(--verde)">Nuestra historia</h2>
+  <p style="max-width:800px;margin:auto;text-align:center">
+    Been Catering nace de la pasión por la cocina casera y la presentación profesional.
+    Atendemos desde reuniones familiares hasta grandes eventos, cuidando siempre
+    el sabor, la cantidad y el servicio para que tú disfrutes sin preocupaciones.
+  </p>
+</section>
 
-        <a class="btn-sec" href="#paquetes">Ver paquetes</a>
+<!-- GALERIA -->
+<section id="galeria" style="background:var(--crema)">
+  <h2 style="text-align:center;color:var(--verde)">Galería</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="guisado1.jpg" alt="Guisado 1">
+      <p>Guisados tradicionales</p>
     </div>
-
-    <img src="buffet1.jpg" alt="Buffet imagen">
+    <div class="card">
+      <img src="guisado2.jpg" alt="Guisado 2">
+      <p>Variedad de platillos</p>
+    </div>
+    <div class="card">
+      <img src="guisado3.jpg" alt="Guisado 3">
+      <p>Calidad y sabor</p>
+    </div>
+    <div class="card">
+      <img src="sandwich.jpg" alt="Sandwiches">
+      <p>Complementos y opciones</p>
+    </div>
+  </div>
 </section>
 
 <!-- PAQUETES -->
 <section id="paquetes">
-    <h2>Paquetes de Buffet</h2>
-
-    <p style="text-align:center;">Precios aproximados. Varían según menú, zona y cantidad de personas.</p>
-
-    <div class="paquete">
-        <h3>Paquete 4 guisados (ideal 30–70 personas)</h3>
-        <p><strong>Incluye:</strong> 4 guisados, guarniciones, arroz, pasta, tortillas, desechables básicos.</p>
-        <p><strong>Precio estimado:</strong> $95 – $125 por persona.</p>
+  <h2 style="text-align:center;color:var(--verde)">Paquetes de Buffet</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Paquete 4 guisados</h3>
+      <p>Ideal para 30 a 70 personas</p>
+      <p>Incluye arroz, pasta, frijoles y tortillas</p>
+      <strong>$95 – $125 por persona</strong>
     </div>
-
-    <div class="paquete">
-        <h3>Paquete 5 guisados (ideal 70–120 personas)</h3>
-        <p><strong>Incluye:</strong> 5 guisados, guarniciones, ensalada, arroz, pasta.</p>
-        <p><strong>Precio estimado:</strong> $110 – $145 por persona.</p>
+    <div class="card">
+      <h3>Paquete 5 guisados</h3>
+      <p>Ideal para 70 a 120 personas</p>
+      <p>Incluye guarniciones y ensalada</p>
+      <strong>$110 – $145 por persona</strong>
     </div>
-
-    <div class="paquete">
-        <h3>Paquete 8 guisados (ideal 120–200 personas)</h3>
-        <p><strong>Incluye:</strong> 8 guisados variados, guarniciones, arroz, pasta, café incluido.</p>
-        <p><strong>Precio estimado:</strong> $135 – $170 por persona.</p>
+    <div class="card">
+      <h3>Paquete 8 guisados</h3>
+      <p>Ideal para 120 a 200 personas</p>
+      <p>Mayor variedad y cantidad</p>
+      <strong>$135 – $175 por persona</strong>
     </div>
-
-    <p style="text-align:center;">
-        Si deseas más variedad, podemos añadir guisados extra.  
-        <br>
-        <strong>Pregunta por tu menú completo:</strong>
-    </p>
-
-    <div style="text-align:center;">
-        <a class="btn-w" href="https://wa.me/528138618819?text=Hola,%20¿pueden%20enviarme%20el%20menú%20completo%20de%20guisados%20por%20favor?">
-            Pedir menú completo
-        </a>
-    </div>
-
+  </div>
+  <p style="text-align:center;margin-top:20px">
+    Pregunta por nuestro menú completo, opciones especiales y servicios adicionales.
+  </p>
 </section>
 
-<!-- MENÚ ADICIONAL -->
-<section>
-    <h2>Opciones adicionales</h2>
-
-    <div class="grid">
-        <div class="card">
-            <img src="pavo1.jpg" alt="Pavo">
-            <h3>Pavo, pierna mechada y lomo</h3>
-            <p>Especiales para fechas y eventos.</p>
-        </div>
-
-        <div class="card">
-            <img src="pescado1.jpg" alt="Pescado">
-            <h3>Filetes de pescado</h3>
-            <p>Opción premium. Pregunta por precios.</p>
-        </div>
-
-        <div class="card">
-            <img src="ensalada1.jpg" alt="Ensaladas">
-            <h3>Ensaladas</h3>
-            <p>Frescas, gourmet y personalizadas.</p>
-        </div>
+<!-- PREGUNTAS -->
+<section id="preguntas" style="background:var(--crema)">
+  <h2 style="text-align:center;color:var(--verde)">Preguntas frecuentes</h2>
+  <div class="cards">
+    <div class="card">
+      ¿Incluye bebidas?<br>
+      <strong>Aguas y café disponibles como adicional.</strong>
     </div>
-
-    <p style="text-align:center; margin-top:20px;">
-        También manejamos mesas de snacks, postres y café como servicio adicional.
-    </p>
-</section>
-
-<!-- GALERÍA -->
-<section id="galeria">
-    <h2>Galería</h2>
-
-    <div class="grid">
-        <div class="card"><img src="guisado1.jpg"></div>
-        <div class="card"><img src="guisado2.jpg"></div>
-        <div class="card"><img src="guisado3.jpg"></div>
-        <div class="card"><img src="buffet2.jpg"></div>
+    <div class="card">
+      ¿Con cuánta anticipación debo reservar?<br>
+      <strong>Recomendamos mínimo 3 a 5 días.</strong>
     </div>
-</section>
-
-<!-- MENSAJE DE HORARIOS -->
-<section>
-    <h2>Horarios y zonas</h2>
-    <p style="text-align:center;">
-        No cubrimos eventos de madrugada ni fiestas de consumo de alcohol excesivo.  
-        <br>  
-        Preferimos ambientes familiares para seguridad de todos.  
-        <br><br>
-        Pregunta si cubrimos tu zona.
-    </p>
+    <div class="card">
+      ¿Atienden cualquier zona?<br>
+      <strong>Sujeto a disponibilidad y distancia.</strong>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACTO -->
 <section id="contacto">
-    <h2>Contacto</h2>
-
-    <form>
-        <input type="text" placeholder="Nombre">
-        <input type="text" placeholder="Teléfono">
-        <textarea placeholder="Mensaje"></textarea>
-
-        <a class="btn-w" href="https://wa.me/528138618819?text=Hola,%20quiero%20información%20de%20catering.">
-            Enviar por WhatsApp
-        </a>
-    </form>
+  <h2 style="text-align:center;color:var(--verde)">Solicita tu cotización</h2>
+  <form action="https://wa.me/5218138618819" target="_blank">
+    <input type="text" placeholder="Nombre" required>
+    <input type="tel" placeholder="Teléfono" required>
+    <input type="number" placeholder="Número de personas" required>
+    <select required>
+      <option value="">Selecciona un paquete</option>
+      <option>Paquete 4 guisados</option>
+      <option>Paquete 5 guisados</option>
+      <option>Paquete 8 guisados</option>
+      <option>Quiero cotización personalizada</option>
+    </select>
+    <textarea placeholder="Fecha del evento, zona y comentarios"></textarea>
+    <button type="submit">Enviar cotización</button>
+  </form>
 </section>
 
 <!-- FOOTER -->
 <footer>
-    <p>Been Catering Buffet · Monterrey</p>
-    <div class="social">
-        <a href="https://www.facebook.com/profile.php?id=61584705306004">Facebook</a>
-        <a href="https://www.instagram.com/been.buffet/">Instagram</a>
-        <a href="https://wa.me/528138618819">WhatsApp</a>
-    </div>
+  <p>Síguenos en redes sociales</p>
+  <div class="social">
+    <a href="https://www.facebook.com/profile.php?id=61584705306004" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/been.buffet/" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/5218138618819" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+  <p style="margin-top:20px">© Been Catering Buffet</p>
 </footer>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/5218138618819" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
+
