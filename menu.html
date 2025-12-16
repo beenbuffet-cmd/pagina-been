@@ -1,84 +1,248 @@
-<section id="especiales" style="background:#fff4e6;">
-    <h2 class="titulo">Especiales Gourmet y de Temporada</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú Completo | Been Catering Buffet</title>
 
-    <p style="max-width:900px; margin:0 auto 30px; font-size:18px; line-height:1.6;">
-        Nuestros <strong>Especiales Gourmet</strong> están pensados para eventos que buscan un toque más elegante.
-        Algunos platillos se manejan como <strong>premium o adicionales</strong> y se cotizan de forma personalizada.
-        <br><br>
-        <em>Los platillos de pavo están disponibles únicamente en temporada navideña.</em>
-    </p>
+<style>
+:root{
+  --verde:#1f4d3b;
+  --verde-claro:#eef6f3;
+  --naranja:#f4a024;
+  --oscuro:#222;
+  --gris:#f7f7f7;
+}
 
-    <div class="grid">
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;}
 
-        <div class="card premium">
-            <h3>🥩 Pierna de cerdo mechada</h3>
-            <p>En salsa de la casa, jugosa y suave.</p>
-            <span class="tag">Premium</span>
-        </div>
+body{
+  background:#fff;
+  color:var(--oscuro);
+  line-height:1.6;
+}
 
-        <div class="card premium">
-            <h3>🥩 Lomo de cerdo en salsa de ciruela</h3>
-            <p>Sabor agridulce, ideal para eventos formales.</p>
-            <span class="tag">Premium</span>
-        </div>
+/* HEADER */
+header{
+  background:var(--verde);
+  color:#fff;
+  padding:16px 25px;
+}
+header nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+header a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:15px;
+  font-weight:600;
+}
 
-        <div class="card premium">
-            <h3>🥩 Lomo de cerdo en salsa de manzana</h3>
-            <p>Receta especial, balance dulce y salado.</p>
-            <span class="tag">Premium</span>
-        </div>
+/* TITULO */
+.hero{
+  background:var(--verde-claro);
+  padding:45px 20px;
+  text-align:center;
+}
+.hero h1{font-size:34px;margin-bottom:10px}
+.hero p{max-width:750px;margin:auto}
 
-        <div class="card premium">
-            <h3>🔥 Alambre gourmet</h3>
-            <p>Res, pollo y tocino con pimientos y cebolla.</p>
-            <span class="tag">Premium</span>
-        </div>
+/* SECCIONES */
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:50px 20px;
+}
+section h2{
+  color:var(--verde);
+  margin-bottom:25px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
 
-        <div class="card premium">
-            <h3>🥩 Carne deshebrada especial</h3>
-            <p>Preparación lenta con especias seleccionadas.</p>
-            <span class="tag">Premium</span>
-        </div>
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
 
-        <div class="card premium">
-            <h3>🍖 Costilla de cerdo BBQ</h3>
-            <p>Salsa BBQ artesanal, suave y jugosa.</p>
-            <span class="tag">Premium</span>
-        </div>
+/* TARJETAS */
+.card{
+  background:#fff;
+  border-radius:14px;
+  padding:18px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  transition:.3s;
+}
+.card:hover{transform:translateY(-6px)}
 
-        <div class="card adicional">
-            <h3>🦃 Pavo horneado</h3>
-            <p>Receta tradicional <strong>(temporada navideña)</strong>.</p>
-            <span class="tag">Adicional · Temporada</span>
-        </div>
+.card h4{
+  font-size:16px;
+}
 
-        <div class="card adicional">
-            <h3>🦃 Pavo en salsa gravy</h3>
-            <p>Ideal para cenas y celebraciones <strong>(temporada navideña)</strong>.</p>
-            <span class="tag">Adicional · Temporada</span>
-        </div>
+/* TAGS */
+.tag{
+  display:inline-block;
+  font-size:12px;
+  padding:5px 10px;
+  border-radius:20px;
+  margin-bottom:8px;
+  font-weight:bold;
+}
+.premium{background:#fde7c6;color:#8a4b00}
+.adicional{background:#e3e6ff;color:#2b2b6b}
 
-        <div class="card premium">
-            <h3>🍗 Pechuga de pollo rellena</h3>
-            <p>Rellena de jamón y queso, horneada.</p>
-            <span class="tag">Premium</span>
-        </div>
+/* BOTON */
+.btn{
+  display:inline-block;
+  margin-top:35px;
+  background:var(--verde);
+  color:#fff;
+  padding:14px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-        <div class="card premium">
-            <h3>🥩 Filete de cerdo mostaza-miel</h3>
-            <p>Salsa suave y elegante.</p>
-            <span class="tag">Premium</span>
-        </div>
+/* FOOTER */
+footer{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:30px 20px;
+  margin-top:40px;
+}
+</style>
+</head>
 
+<body>
+
+<header>
+  <nav>
+    <strong>Been Catering Buffet</strong>
+    <div>
+      <a href="index.html">Inicio</a>
+      <a href="paquetes.html">Paquetes</a>
+      <a href="menu.html">Menú</a>
+      <a href="contacto.html">Contacto</a>
     </div>
+  </nav>
+</header>
 
-    <div style="text-align:center; margin-top:40px;">
-        <p style="font-size:18px;">
-            ¿Quieres conocer nuestro <strong>menú completo</strong> o cotizar estos especiales?
-        </p>
-        <a href="https://wa.me/5218138618819" class="whatsapp" style="position:static; display:inline-block;">
-            Cotizar por WhatsApp
-        </a>
-    </div>
+<div class="hero">
+  <h1>Menú Completo</h1>
+  <p>Platillos preparados al momento, con sazón casera y opciones personalizadas para eventos tipo buffet.</p>
+</div>
+
+<!-- RES -->
+<section>
+<h2>🥩 Guisados de Res</h2>
+<div class="grid">
+<div class="card"><h4>Puntas de filete a la mexicana</h4></div>
+<div class="card"><h4>Bistec de res a la mexicana</h4></div>
+<div class="card"><h4>Alambre de res</h4></div>
+<div class="card"><h4>Res entomatada</h4></div>
+<div class="card"><h4>Res en salsa pasilla</h4></div>
+<div class="card"><h4>Res en salsa guajillo</h4></div>
+<div class="card"><h4>Res a la jardinera</h4></div>
+<div class="card"><h4>Res en chile morita</h4></div>
+<div class="card"><h4>Res en salsa verde</h4></div>
+<div class="card"><h4>Tinga de res</h4></div>
+</div>
 </section>
+
+<!-- CERDO -->
+<section>
+<h2>🐖 Guisados de Cerdo</h2>
+<div class="grid">
+<div class="card"><h4>Bistec de cerdo en pasilla</h4></div>
+<div class="card"><h4>Costilla en salsa morita</h4></div>
+<div class="card"><h4>Costilla en salsa verde</h4></div>
+<div class="card"><h4>Cerdo en salsa roja</h4></div>
+<div class="card"><h4>Cerdo en salsa pasilla</h4></div>
+<div class="card"><h4>Cerdo en salsa guajillo</h4></div>
+<div class="card"><h4>Chuleta ahumada</h4></div>
+<div class="card"><h4>Cerdo en adobo</h4></div>
+<div class="card"><h4>Picadillo de cerdo</h4></div>
+<div class="card"><h4>Chicharrón prensado</h4></div>
+</div>
+</section>
+
+<!-- POLLO -->
+<section>
+<h2>🍗 Guisados de Pollo</h2>
+<div class="grid">
+<div class="card"><h4>Pollo en mole</h4></div>
+<div class="card"><h4>Pollo en mole rojo</h4></div>
+<div class="card"><h4>Pollo en mole verde</h4></div>
+<div class="card"><h4>Rajas con crema y pollo</h4></div>
+<div class="card"><h4>Pollo en salsa verde</h4></div>
+<div class="card"><h4>Pollo en salsa roja</h4></div>
+<div class="card"><h4>Pollo a la jardinera</h4></div>
+<div class="card"><h4>Tinga de pollo</h4></div>
+<div class="card"><h4>Pechuga empanizada</h4></div>
+<div class="card"><h4>Pollo en adobo</h4></div>
+</div>
+</section>
+
+<!-- PESCADO -->
+<section>
+<h2>🐟 Pescado</h2>
+<div class="grid">
+<div class="card"><h4>Pescado empanizado</h4></div>
+<div class="card"><h4>Pescado a la veracruzana</h4></div>
+<div class="card"><h4>Pescado al ajo</h4></div>
+<div class="card"><h4>Pescado en salsa verde</h4></div>
+<div class="card"><h4>Pescado en salsa roja</h4></div>
+<div class="card"><h4>Pescado al limón</h4></div>
+<div class="card"><h4>Pescado en chipotle</h4></div>
+<div class="card"><h4>Pescado empapelado</h4></div>
+<div class="card"><h4>Pescado con verduras</h4></div>
+<div class="card"><h4>Pescado a la plancha</h4></div>
+</div>
+</section>
+
+<!-- ESPECIALIDADES -->
+<section>
+<h2>⭐ Especialidades Gourmet</h2>
+<div class="grid">
+<div class="card"><span class="tag premium">Premium</span><h4>Lomo en salsa de ciruela</h4></div>
+<div class="card"><span class="tag premium">Premium</span><h4>Pierna mechada al vino</h4></div>
+<div class="card"><span class="tag premium">Premium</span><h4>Lomo relleno</h4></div>
+<div class="card"><span class="tag premium">Premium</span><h4>Arrachera marinada</h4></div>
+<div class="card"><span class="tag premium">Premium</span><h4>Chamorro adobado</h4></div>
+<div class="card"><span class="tag premium">Premium</span><h4>Costilla BBQ</h4></div>
+<div class="card"><span class="tag premium">Premium</span><h4>Pavo horneado (temporada navideña)</h4></div>
+<div class="card"><span class="tag premium">Premium</span><h4>Pollo relleno</h4></div>
+<div class="card"><span class="tag premium">Premium</span><h4>Filete en salsa de champiñones</h4></div>
+<div class="card"><span class="tag premium">Premium</span><h4>Medallones de cerdo</h4></div>
+</div>
+</section>
+
+<!-- ADICIONALES -->
+<section>
+<h2>➕ Adicionales</h2>
+<div class="grid">
+<div class="card"><span class="tag adicional">Adicional</span><h4>Mesa de snacks</h4></div>
+<div class="card"><span class="tag adicional">Adicional</span><h4>Mesa de postres</h4></div>
+<div class="card"><span class="tag adicional">Adicional</span><h4>Cuernitos</h4></div>
+<div class="card"><span class="tag adicional">Adicional</span><h4>Club sándwich</h4></div>
+<div class="card"><span class="tag adicional">Adicional</span><h4>Wraps</h4></div>
+<div class="card"><span class="tag adicional">Adicional</span><h4>Chapatas</h4></div>
+</div>
+
+<a class="btn" href="https://wa.me/52XXXXXXXXXX">Cotizar por WhatsApp</a>
+</section>
+
+<footer>
+<p>© Been Catering Buffet · Menú sujeto a disponibilidad</p>
+</footer>
+
+</body>
+</html>
 
