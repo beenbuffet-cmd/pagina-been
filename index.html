@@ -8,18 +8,14 @@
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 
-</head>
+  <!-- Font Awesome -->
   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
 
 <body>
-
-
-
-
-</section>
 
 <!-- ================= HEADER ================= -->
 <header style="padding:20px; text-align:center;">
@@ -29,20 +25,19 @@
     <a href="menu.html">Menú Completo</a> |
     <a href="snacks.html">Snacks</a> |
     <a href="postres.html">Postres</a> |
-    <a href="paquetes.html">Postres</a> |
+    <a href="paquetes.html">Paquetes</a> |
     <a href="adicionales.html">Adicionales</a>
   </nav>
 </header>
 
-
 <!-- ================= HERO ================= -->
 <section class="adicionales-section">
-   <img src="buffet.jpg" alt
+  <img src="buffet.jpg" alt="Servicio de buffet Been">
+
   <p class="adicionales-desc">
     En <strong>Been Catering Buffet</strong> preparamos platillos al momento,
     con sazón casera y opciones personalizadas para todo tipo de eventos.
   </p>
-
 
   <p class="historia-texto">
     Nos especializamos en <strong>buffet para eventos</strong>,
@@ -64,29 +59,28 @@
   <div class="adicionales-grid">
 
     <div class="adicional-card">
-  <img src="guisado2.jpg" alt="Guisados tradicionales">
-  <h3>Menú Completo</h3>
-  <p>Guisados, guarniciones, pastas, ensaladas.</p>
-  <a href="menu.html" class="btn-whatsapp">Ver menu completo </a>
-</div>
-
-
-    <div class="adicional-card">
-  <img src="sandwich.jpg" alt="Snacks y sandwiches">
-  <h3>Snacks</h3>
-  <p>Cuernitos, club sándwich y bocadillos.</p>
-  <a href="snacks.html" class="btn-whatsapp">Ver snacks</a>
-</div>
-    <div class="adicional-card">
-  <img src="guisado3.jpg" alt="Guisados de res y cerdo">
-  <h3>Guisados Tradicionales</h3>
-  <p>Res, cerdo y pollo preparados al momento.</p>
-  <a href="menu.html" class="btn-whatsapp">Ver menú</a>
-</div>
-
+      <img src="guisado2.jpg" alt="Guisados tradicionales">
+      <h3>Menú Completo</h3>
+      <p>Guisados, guarniciones, pastas, ensaladas.</p>
+      <a href="menu.html" class="btn-whatsapp">Ver menú completo</a>
+    </div>
 
     <div class="adicional-card">
-       <img src="postres.jpg" alt="mini pays gelatinas flanes ">
+      <img src="sandwich.jpg" alt="Snacks y sandwiches">
+      <h3>Snacks</h3>
+      <p>Cuernitos, club sándwich y bocadillos.</p>
+      <a href="snacks.html" class="btn-whatsapp">Ver snacks</a>
+    </div>
+
+    <div class="adicional-card">
+      <img src="guisado3.jpg" alt="Guisados de res y cerdo">
+      <h3>Guisados Tradicionales</h3>
+      <p>Res, cerdo y pollo preparados al momento.</p>
+      <a href="menu.html" class="btn-whatsapp">Ver menú</a>
+    </div>
+
+    <div class="adicional-card">
+      <img src="postres.jpg" alt="Postres">
       <h3>Postres</h3>
       <p>Mesa de postres ideal para cerrar tu evento.</p>
       <a href="postres.html" class="btn-whatsapp">Ver postres</a>
@@ -94,7 +88,7 @@
 
     <div class="adicional-card">
       <span class="tag-premium">ADICIONAL</span>
-       <img src="aguas.jpg" alt="Guisados de res y cerdo">
+      <img src="aguas.jpg" alt="Extras">
       <h3>Extras</h3>
       <p>Café americano, charolas adicionales y servicios especiales.</p>
       <a href="adicionales.html" class="btn-whatsapp">Ver adicionales</a>
@@ -102,104 +96,64 @@
 
   </div>
 </section>
-  <div class="adicional-card destacado">
+
+<div class="adicional-card destacado">
   <span class="tag-premium">PAQUETES</span>
   <h3>Paquetes para Eventos</h3>
-  <p>
-    Conoce nuestras opciones por número de guisados, ideales para
-    eventos de 100 a 200 personas.
-  </p>
-  <a href="paquetes.html" class="btn-whatsapp">
-    Ver paquetes
-  </a>
+  <p>Opciones ideales para eventos de 100 a 200 personas.</p>
+  <a href="paquetes.html" class="btn-whatsapp">Ver paquetes</a>
 </div>
 
 <!-- ================= COTIZACIÓN ================= -->
 <section class="cotizacion-box">
-
   <h3>Cotiza tu evento</h3>
-  <p>
-    Cuéntanos los detalles de tu evento para ofrecerte una propuesta a tu medida.
-  </p>
+  <p>Cuéntanos los detalles de tu evento para ofrecerte una propuesta a tu medida.</p>
 
   <form
-    action="https://wa.me/525138618819"
+    action="https://wa.me/528138618819"
     method="get"
     target="_blank"
     onsubmit="this.action += '?text=' + encodeURIComponent(mensaje.value);">
 
-    <textarea id="mensaje" name="mensaje" placeholder="
-Nombre:
+    <textarea id="mensaje" name="mensaje" required
+placeholder="Nombre:
 Fecha del evento:
 Número de comensales:
-Tipo de evento (boda, cumpleaños, empresarial, etc.):
-
+Tipo de evento:
 ¿Te interesa buffet completo?
 ¿Algún guisado específico?
 ¿Requieres snacks o postres?
-Ubicación del evento:
-Horario aproximado:
-Comentarios adicionales:
-" required></textarea>
+Ubicación:
+Horario:
+Comentarios adicionales:"></textarea>
 
     <button type="submit">Enviar cotización por WhatsApp</button>
   </form>
-
 </section>
-  
 
 <!-- ================= FOOTER ================= -->
 <footer style="text-align:center; padding:30px; font-size:14px;">
   © Been Catering Buffet – Todos los derechos reservados
 </footer>
 
-<!-- ================= BOTONES FLOTANTES ================= -->
-<a href="https://wa.me/8138618819"
-   target="_blank"
-   class="whatsapp-float">
-   💬
 <!-- ===== BOTONES REDES SOCIALES ===== -->
-<div class="social-float">
-
 <div class="social-float">
   <a href="https://www.instagram.com/" target="_blank" class="social-btn instagram">
     <i class="fab fa-instagram"></i>
   </a>
 
-  <a href="https://www.facebook.com/profile.php?id=61585148378102" target="_blank" class="social-btn facebook">
+  <a href="https://www.facebook.com/profile.php?id=61585148378102"
+     target="_blank"
+     class="social-btn facebook">
     <i class="fab fa-facebook-f"></i>
   </a>
 
-  <a href="https://wa.me/528138618819" target="_blank" class="social-btn whatsapp">
+  <a href="https://wa.me/528138618819"
+     target="_blank"
+     class="social-btn whatsapp">
     <i class="fab fa-whatsapp"></i>
   </a>
 </div>
 
-
 </body>
 </html>
-<!-- ===== BOTONES REDES SOCIALES ===== -->
-<div class="social-float">
-
-  <a href="https://www.instagram.com/been.buffet/"
-     target="_blank"
-     class="social-btn instagram">
-     <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-  </a>
-
-  <a
-  href="https://www.facebook.com/profile.php?id=61585148378102"
-  class="facebook-float"
-  target="_blank"
-  aria-label="Facebook Been"
->
-  <i class="fab fa-facebook-f"></i>
-</a>
-
-  </a>
-
-</div>
-
-
-
-
