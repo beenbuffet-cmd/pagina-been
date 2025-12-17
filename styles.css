@@ -206,14 +206,45 @@ footer {
 .redes-sociales img:hover {
   transform: scale(1.2);
 }
-.social-float{
+.social-float {
   position: fixed;
-  bottom: 90px;
-  right: 20px;
+  right: 16px;
+  bottom: 110px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  z-index: 999;
+  gap: 14px;
+  z-index: 9999;
+}
+
+.social-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.35);
+  text-decoration: none;
+}
+
+.social-btn.instagram {
+  background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285AEB);
+}
+
+.social-btn.facebook {
+  background-color: #1877f2;
+}
+
+.social-btn.whatsapp {
+  background-color: #25d366;
+}
+
+.social-btn:hover {
+  transform: scale(1.08);
+}
+
 }
 
 .social-btn{
@@ -334,6 +365,7 @@ footer {
 .facebook-float:hover {
   background-color: #145dbf;
 }
+
 
 
 
