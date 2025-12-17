@@ -365,6 +365,22 @@ footer {
 .facebook-float:hover {
   background-color: #145dbf;
 }
+.hero-img{
+  width:100%;
+  max-width:900px;   /* controla el tamaño máximo */
+  height:auto;
+  display:block;
+  margin:40px auto;  /* la centra */
+  border-radius:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+@media (max-width:768px){
+  .hero-img{
+    max-width:100%;
+    margin:25px auto;
+  }
+}
+
 
 
 
