@@ -187,5 +187,11 @@ footer {
   border-radius: 15px 15px 0 0;
   margin-bottom: 15px;
 }
+.destacado {
+  border: 2px solid #c9a24d;
+  background: linear-gradient(145deg, #fffdf7, #ffffff);
+}
+
+
 
 
