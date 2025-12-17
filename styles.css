@@ -293,6 +293,27 @@ footer {
   border-radius: 25px;
   text-decoration: none;
 }
+/* ===== BOTÓN WHATSAPP FLOTANTE ===== */
+
+.whatsapp-float{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,.35);
+  z-index: 9999;
+}
+
+.whatsapp-float img{
+  width: 30px;
+}
+
 
 
 
